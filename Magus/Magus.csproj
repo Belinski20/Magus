@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CCCB9534-8EF6-425C-9A53-8DB24ED04A9C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Magus</RootNamespace>
+    <AssemblyName>Magus</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\Character.cs" />
+    <Compile Include="Entity\CharacterGenerator.cs" />
+    <Compile Include="Entity\CharacterManager.cs" />
+    <Compile Include="Entity\AI.cs" />
+    <Compile Include="Entity\ClassTypes.cs" />
+    <Compile Include="Entity\EnemyTypes.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameBoard\GameManager.cs" />
+    <Compile Include="GameBoard\Grid.cs" />
+    <Compile Include="GameBoard\GridMoveTile.cs" />
+    <Compile Include="GameBoard\GridSquare.cs" />
+    <Compile Include="Items\ItemGenerator.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\ItemClass.cs" />
+    <Compile Include="Items\ItemManager.cs" />
+    <Compile Include="Items\ItemReq.cs" />
+    <Compile Include="Items\ItemTypes.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\HostileButton.cs" />
+    <Compile Include="UI\ButtonBase.cs" />
+    <Compile Include="UI\DropButton.cs" />
+    <Compile Include="UI\MinusButton.cs" />
+    <Compile Include="UI\NextClassButton.cs" />
+    <Compile Include="UI\NoButton.cs" />
+    <Compile Include="UI\OKButton.cs" />
+    <Compile Include="UI\PlusButton.cs" />
+    <Compile Include="UI\PrevClassButton.cs" />
+    <Compile Include="UI\QuitButton.cs" />
+    <Compile Include="Util\Constants.cs" />
+    <Compile Include="UI\EndTurnButton.cs" />
+    <Compile Include="Util\LevelRanks.cs" />
+    <Compile Include="Util\Location.cs" />
+    <Compile Include="Util\StatConstants.cs" />
+    <Compile Include="Util\StatUtil.cs" />
+    <Compile Include="UI\TransitionButton.cs" />
+    <Compile Include="UI\MenuState.cs" />
+    <Compile Include="Util\Stats.cs" />
+    <Compile Include="Util\Terrain.cs" />
+    <Compile Include="UI\UIComponents.cs" />
+    <Compile Include="Util\TurnState.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WORLD.MGS" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Effects\Effect20K.bmp" />
+    <Content Include="Resources\Effects\EffectBam.bmp" />
+    <Content Include="Resources\Effects\EffectBif.bmp" />
+    <Content Include="Resources\Effects\EffectBom.bmp" />
+    <Content Include="Resources\Effects\EffectEh.bmp" />
+    <Content Include="Resources\Effects\EffectNegated.bmp" />
+    <Content Include="Resources\Effects\EffectNHG.bmp" />
+    <Content Include="Resources\Effects\EffectPaf.bmp" />
+    <Content Include="Resources\Effects\EffectPoff.bmp" />
+    <Content Include="Resources\Effects\EffectUh.bmp" />
+    <Content Include="Resources\Effects\EffectZap.bmp" />
+    <Content Include="Resources\Entity\ChaosKnight.bmp" />
+    <Content Include="Resources\Entity\ChaosWarrior.bmp" />
+    <Content Include="Resources\Entity\DarkOne.bmp" />
+    <Content Include="Resources\Entity\DeathKnight.bmp" />
+    <Content Include="Resources\Entity\DeathLord.bmp" />
+    <Content Include="Resources\Entity\Demon.bmp" />
+    <Content Include="Resources\Entity\DemonPrince.bmp" />
+    <Content Include="Resources\Entity\Djinn.bmp" />
+    <Content Include="Resources\Entity\Dragon.bmp" />
+    <Content Include="Resources\Entity\Fenix.bmp" />
+    <Content Include="Resources\Entity\Ghost.bmp" />
+    <Content Include="Resources\Entity\Goblin.bmp" />
+    <Content Include="Resources\Entity\GolemBrown.bmp" />
+    <Content Include="Resources\Entity\GolemGray.bmp" />
+    <Content Include="Resources\Entity\Guardian.bmp" />
+    <Content Include="Resources\Entity\Hobgoblin.bmp" />
+    <Content Include="Resources\Entity\Lightning.bmp" />
+    <Content Include="Resources\Entity\Minotaur.bmp" />
+    <Content Include="Resources\Entity\Monk.bmp" />
+    <Content Include="Resources\Entity\OrchFighter.bmp" />
+    <Content Include="Resources\Entity\OrchKnight.bmp" />
+    <Content Include="Resources\Entity\OrchMage.bmp" />
+    <Content Include="Resources\Entity\OrchRanger.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\BarbarianFemale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\BarbarianMale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\DruidFemale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\DruidMale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\Duck.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\DuckMageFemale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\DuckMageMale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\DwarfFemale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\DwarfMale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\ElfFemale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\ElfMale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\FemaleKnight.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\Knight.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\ShamanFemale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\ShamanMale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\WizardFemale.bmp" />
+    <Content Include="Resources\Entity\PlayableChars\WizardMale.bmp" />
+    <Content Include="Resources\Entity\ShadowBeast.bmp" />
+    <Content Include="Resources\Entity\Skeleton.bmp" />
+    <Content Include="Resources\Entity\SmallOne.bmp" />
+    <Content Include="Resources\Entity\SmallOneMage.bmp" />
+    <Content Include="Resources\Entity\Sorcerer.bmp" />
+    <Content Include="Resources\Entity\Spirit.bmp" />
+    <Content Include="Resources\Entity\Troll.bmp" />
+    <Content Include="Resources\Entity\Undead.bmp" />
+    <Content Include="Resources\Entity\Undine.bmp" />
+    <Content Include="Resources\Entity\Warrior.bmp" />
+    <Content Include="Resources\Entity\WitchLord.bmp" />
+    <Content Include="Resources\Entity\Zombie.bmp" />
+    <Content Include="Resources\Items\1h-Axe.bmp" />
+    <Content Include="Resources\Items\2h-Sword.bmp" />
+    <Content Include="Resources\Items\Armor.bmp" />
+    <Content Include="Resources\Items\Arrows.bmp" />
+    <Content Include="Resources\Items\BallAndChain.bmp" />
+    <Content Include="Resources\Items\BigHelmet.bmp" />
+    <Content Include="Resources\Items\BigShield.bmp" />
+    <Content Include="Resources\Items\BloodTaste.bmp" />
+    <Content Include="Resources\Items\Bow.bmp" />
+    <Content Include="Resources\Items\Bubble.bmp" />
+    <Content Include="Resources\Items\ChainMail.bmp" />
+    <Content Include="Resources\Items\Chock.bmp" />
+    <Content Include="Resources\Items\Cloak.bmp" />
+    <Content Include="Resources\Items\CrossBow.bmp" />
+    <Content Include="Resources\Items\Dagger.bmp" />
+    <Content Include="Resources\Items\DragonsTooth.bmp" />
+    <Content Include="Resources\Items\ElvenCloak.bmp" />
+    <Content Include="Resources\Items\Emerald.bmp" />
+    <Content Include="Resources\Items\EmeraldRing.bmp" />
+    <Content Include="Resources\Items\Enchant.bmp" />
+    <Content Include="Resources\Items\Faithful.bmp" />
+    <Content Include="Resources\Items\FireBlade.bmp" />
+    <Content Include="Resources\Items\Focus.bmp" />
+    <Content Include="Resources\Items\GhostBlade.bmp" />
+    <Content Include="Resources\Items\Gloves.bmp" />
+    <Content Include="Resources\Items\Helmet.bmp" />
+    <Content Include="Resources\Items\LeadBall.bmp" />
+    <Content Include="Resources\Items\Leather.bmp" />
+    <Content Include="Resources\Items\Mace.bmp" />
+    <Content Include="Resources\Items\Negater.bmp" />
+    <Content Include="Resources\Items\Opal.bmp" />
+    <Content Include="Resources\Items\OpalRing.bmp" />
+    <Content Include="Resources\Items\Potion.bmp" />
+    <Content Include="Resources\Items\Sabre.bmp" />
+    <Content Include="Resources\Items\ShadowCloak.bmp" />
+    <Content Include="Resources\Items\Shield.bmp" />
+    <Content Include="Resources\Items\ShootingStar.bmp" />
+    <Content Include="Resources\Items\SilverBow.bmp" />
+    <Content Include="Resources\Items\Slayer.bmp" />
+    <Content Include="Resources\Items\Staff.bmp" />
+    <Content Include="Resources\Items\StoneAxe.bmp" />
+    <Content Include="Resources\Items\StuddedLeather.bmp" />
+    <Content Include="Resources\Items\SunArmor.bmp" />
+    <Content Include="Resources\Items\SunBow.bmp" />
+    <Content Include="Resources\Items\SunGloves.bmp" />
+    <Content Include="Resources\Items\SunHelmet.bmp" />
+    <Content Include="Resources\Items\SunsEdge.bmp" />
+    <Content Include="Resources\Items\SunShield.bmp" />
+    <Content Include="Resources\Items\Sword.bmp" />
+    <Content Include="Resources\Items\ThrowingStar.bmp" />
+    <Content Include="Resources\Items\Topaz.bmp" />
+    <Content Include="Resources\Items\Wakizashi.bmp" />
+    <Content Include="Resources\Items\WoodenShield.bmp" />
+    <Content Include="Resources\Menu\BraveHeroes.bmp" />
+    <Content Include="Resources\Menu\ChangeTurn.bmp" />
+    <Content Include="Resources\Menu\DarkOneAngry.bmp" />
+    <Content Include="Resources\Menu\DarkOneEyes.bmp" />
+    <Content Include="Resources\Menu\DarkOneSad.bmp" />
+    <Content Include="Resources\Menu\DarkOneSmiles.bmp" />
+    <Content Include="Resources\Menu\Dead.bmp" />
+    <Content Include="Resources\Menu\ShootingStars.bmp" />
+    <Content Include="Resources\Menu\StartUp.bmp" />
+    <Content Include="Resources\Menu\Title.bmp" />
+    <Content Include="Resources\Spells\SpellAir.bmp" />
+    <Content Include="Resources\Spells\SpellBerzerk.bmp" />
+    <Content Include="Resources\Spells\SpellChaos.bmp" />
+    <Content Include="Resources\Spells\SpellConfusion.bmp" />
+    <Content Include="Resources\Spells\SpellDarkness.bmp" />
+    <Content Include="Resources\Spells\SpellDelay.bmp" />
+    <Content Include="Resources\Spells\SpellDemon.bmp" />
+    <Content Include="Resources\Spells\SpellEarth.bmp" />
+    <Content Include="Resources\Spells\SpellFastFeet.bmp" />
+    <Content Include="Resources\Spells\SpellFire.bmp" />
+    <Content Include="Resources\Spells\SpellFireball.bmp" />
+    <Content Include="Resources\Spells\SpellHeal.bmp" />
+    <Content Include="Resources\Spells\SpellHyperspace.bmp" />
+    <Content Include="Resources\Spells\SpellInferno.bmp" />
+    <Content Include="Resources\Spells\SpellLightning.bmp" />
+    <Content Include="Resources\Spells\SpellLightningBolt.bmp" />
+    <Content Include="Resources\Spells\SpellPanic.bmp" />
+    <Content Include="Resources\Spells\SpellPhantom.bmp" />
+    <Content Include="Resources\Spells\SpellPortal.bmp" />
+    <Content Include="Resources\Spells\SpellProtection.bmp" />
+    <Content Include="Resources\Spells\SpellPurify.bmp" />
+    <Content Include="Resources\Spells\SpellShadowBeast.bmp" />
+    <Content Include="Resources\Spells\SpellShootingStar.bmp" />
+    <Content Include="Resources\Spells\SpellSkeleton.bmp" />
+    <Content Include="Resources\Spells\SpellSleep.bmp" />
+    <Content Include="Resources\Spells\SpellStoneFoot.bmp" />
+    <Content Include="Resources\Spells\SpellTerror.bmp" />
+    <Content Include="Resources\Spells\SpellThunderstorm.bmp" />
+    <Content Include="Resources\Spells\SpellVision.bmp" />
+    <Content Include="Resources\Spells\SpellWater.bmp" />
+    <Content Include="Resources\Spells\SpellZombie.bmp" />
+    <Content Include="Resources\Terrain\BrickWall.bmp" />
+    <Content Include="Resources\Terrain\Bush.bmp" />
+    <Content Include="Resources\Terrain\CobblestonePavement.bmp" />
+    <Content Include="Resources\Terrain\Door.bmp" />
+    <Content Include="Resources\Terrain\Earth.bmp" />
+    <Content Include="Resources\Terrain\Gate.bmp" />
+    <Content Include="Resources\Terrain\Grass.bmp" />
+    <Content Include="Resources\Terrain\Gravel.bmp" />
+    <Content Include="Resources\Terrain\Marsh.bmp" />
+    <Content Include="Resources\Terrain\Mountain.bmp" />
+    <Content Include="Resources\Terrain\NotVisible.bmp" />
+    <Content Include="Resources\Terrain\PalmTree.bmp" />
+    <Content Include="Resources\Terrain\Planks.bmp" />
+    <Content Include="Resources\Terrain\Portal.bmp" />
+    <Content Include="Resources\Terrain\RedFlower.bmp" />
+    <Content Include="Resources\Terrain\Sand.bmp" />
+    <Content Include="Resources\Terrain\StonePavement.bmp" />
+    <Content Include="Resources\Terrain\StonesInWater.bmp" />
+    <Content Include="Resources\Terrain\StoneWall.bmp" />
+    <Content Include="Resources\Terrain\Tree.bmp" />
+    <Content Include="Resources\Terrain\Water.bmp" />
+    <Content Include="Resources\Terrain\WoodFloor.bmp" />
+    <Content Include="Resources\Terrain\WoodWall.bmp" />
+    <Content Include="Resources\Terrain\YellowFlower.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

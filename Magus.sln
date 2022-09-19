@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magus", "Magus\Magus.csproj", "{CCCB9534-8EF6-425C-9A53-8DB24ED04A9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit Tests", "Unit Tests\Unit Tests.csproj", "{037187E4-9777-47A3-8B61-D31631B6A32F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCCB9534-8EF6-425C-9A53-8DB24ED04A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCCB9534-8EF6-425C-9A53-8DB24ED04A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCCB9534-8EF6-425C-9A53-8DB24ED04A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCCB9534-8EF6-425C-9A53-8DB24ED04A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{037187E4-9777-47A3-8B61-D31631B6A32F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{037187E4-9777-47A3-8B61-D31631B6A32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{037187E4-9777-47A3-8B61-D31631B6A32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{037187E4-9777-47A3-8B61-D31631B6A32F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEE9C0BC-E5A1-46C3-BFC8-55A9C12412D6}
+	EndGlobalSection
+EndGlobal
